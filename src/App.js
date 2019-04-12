@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ReactGA from "react-ga";
 
 class App extends Component {
   render() {
+    function initializeReactGA() {
+      ReactGA.initialize("UA-123791717-1");
+      ReactGA.pageview("/homepage");
+    }
     return (
       <div className="App">
         <header className="App-header">
